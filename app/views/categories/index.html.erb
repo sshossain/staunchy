@@ -2,15 +2,15 @@
 
 <ul class="thumbnails">
   
-  <% @products.each do |product| %>
+  <% @categories.each do |category| %>
     
   <li class="span4">
     <div class="thumbnail">
       <img src="http://placehold.it/300x200" alt="300x200" style="width: 300px; height: 200px;">
       <div class="caption">
-        <h3><%= product.name %></h3>
-        <p><%= product.description %></p>
-        <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn">Action</a></p>
+        <h3><%= category.name %></h3>
+        <%= link_to "ver categoria", category_path(category), class: "btn" %>
+
       </div>
     </div>
   </li>
@@ -20,4 +20,3 @@
 </ul>
 
 </div>
-
