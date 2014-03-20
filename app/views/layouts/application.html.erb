@@ -55,7 +55,7 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                  <% Category.joins(:products).where("products.quantity > 0").where({:products => {:on_sale => true}}).each do |category| %>
+                  <% Category.joins(:products).where("products.quantity > 0").where({:products => {:on_sale => true}}).uniq.each do |category| %>
                     <li>
                       <%= link_to(category.name, category_path(category)) %>
                     </li>
