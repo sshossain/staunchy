@@ -52,7 +52,9 @@
           <%= link_to("Staunchy", root_path, :class => :brand) %>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="#about">About</a></li>
+              <li>
+                <%= link_to("About", about_path) %>
+              </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
@@ -86,21 +88,10 @@
     </div>
 
     <div class="container">
-      <%= bootstrap_flash %>
-      <!-- Main hero unit for a primary marketing message or call to action -->
-
-      <% if(!user_signed_in? && controller_name != "registrations") %>
-        <div class="hero-unit">
-          <h1>Hi!</h1>
-          <p>Welcome to the best random shopping e-commerce on the web! To buy our totally awesome products, you just need to sign up! </p>
-          <p>
-            <%= link_to("Sign Up", new_user_registration_path, :class => "btn btn-primary btn-large") %>
-          </p>
-        </div>
-      <% end %>  
 
       <!-- Example row of columns -->
       <div class="row">
+        <%= bootstrap_flash %>
         <%= yield %>
       </div>
 

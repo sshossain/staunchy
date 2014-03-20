@@ -4,4 +4,8 @@ class WelcomeController < ApplicationController
   	@products = Product.on_sale.in_stock
 	end
 
+	def about
+		
+	end
+
 end

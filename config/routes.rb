@@ -19,6 +19,8 @@ Staunchy::Application.routes.draw do
 
   resources :products, :only => [:show]
 
+  get 'about' => 'welcome#about', :as => :about
+
   # Example resource route with options:
   #   resources :products do
   #     member do
