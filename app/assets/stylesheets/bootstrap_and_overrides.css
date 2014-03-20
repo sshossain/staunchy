@@ -11,4 +11,37 @@ body {
 	padding-top: 60px;
 	padding-bottom: 40px;
 }
-    
+
+a.product {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+}
+
+.navbar-username {
+	font-size: 17px !important;
+}
+
+.thumbnail {
+	padding-top: 15px;
+}
+
+.thumbnail > img:first-child {
+	width: 348px; 
+	height: 232px;
+}
+
+.thumbnail h3 {
+	font-size: 20px;
+}
+
+.discount {
+	display: block;
+	text-decoration: line-through;
+	font-size: 12px;
+}
+
+.price {
+	font-weight: bold;
+	font-size: 15px;
+}
