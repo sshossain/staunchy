@@ -1,12 +1,4 @@
-<% if(!user_signed_in?) %>
-  <div class="hero-unit">
-    <h1>Hi!</h1>
-    <p>Welcome to the best random shopping e-commerce on the web! To buy our totally awesome products, you just need to sign up! </p>
-    <p>
-      <%= link_to("Sign Up", new_user_registration_path, :class => "btn btn-primary btn-large") %>
-    </p>
-  </div>
-<% end %>  
+<%= render partial: "shared/greetings" %>
 
 <!-- <div class="row-fluid">  -->
 
